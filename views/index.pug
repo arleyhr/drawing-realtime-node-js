@@ -1,0 +1,14 @@
+html
+    head
+        title Realtime Drawing
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css")
+        link(rel="stylesheet", href="css/styles.css")
+    body
+        div.colors#colors
+            each color in ['#1abc9c', '#2ecc71', '#3498db', '#9b59b6', '#34495e', '#f1c40f', '#e67e22', '#e74c3c']
+                button(data-color=color, style=`background-color: ${color}`)
+
+        canvas#canvas
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js")
+        script(src="js/app.js")
